@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI CALCULATOR"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_marginTop="160dp">
+
+    </TextView>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="50dp"
+    >
+    <TextView
+        android:id="@+id/txtheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height     :"
+
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="266dp" />
+
+    <EditText
+        android:id="@+id/edtft"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:hint=""
+        >
+
+    </EditText>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ft"
+
+        android:textSize="20dp"
+
+        tools:layout_editor_absoluteY="266dp" />
+
+    <EditText
+        android:id="@+id/edtinch"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+
+
+        >
+
+    </EditText>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inch,"
+
+        android:textSize="20dp"
+
+        tools:layout_editor_absoluteY="266dp" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/txtweight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight     :"
+            tools:layout_editor_absoluteX="51dp"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteY="266dp" />
+
+        <EditText
+            android:id="@+id/edtWeight"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+
+         >
+
+        </EditText>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            tools:layout_editor_absoluteX="51dp"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteY="266dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="140dp"
+        android:layout_gravity="left"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Calculate BMI " />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="Know Your BMI"
+        android:layout_marginLeft="40dp"
+        android:textSize="25dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtcontent"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:textAlignment="center"
+
+        android:text="" />
+
+
+</LinearLayout>
