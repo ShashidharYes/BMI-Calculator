@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,21 +34,27 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                int wt = Integer.parseInt( edtweight.getText().toString());
                int ft = Integer.parseInt((edtft.getText().toString()));
                int inch = Integer.parseInt((edtinch.getText().toString()));
-                float ht = ft* 12 *2.53f;
-                float totalHt = ht +(float)(inch*2.53);
-               float ans = (wt*100*100)/(totalHt*totalHt);
+               if(wt != 0 && (ft != 0 || inch !=0)){
+                   float ht = ft* 12 *2.53f;
+                   float totalHt = ht +(float)(inch*2.53);
+                   float ans = (wt*100*100)/(totalHt*totalHt);
 
-               txtResult.setText(String.valueOf(ans));
+                   txtResult.setText(String.valueOf(ans));
 
-               if(ans > 25){
-                   txtContent.setText("You are OverWeight 😒");
-               }else if(ans <18){
-                   txtContent.setText("you are underweight 😢");
+                   if(ans > 25){
+                       txtContent.setText("You are OverWeight 😒");
+                   }else if(ans <18){
+                       txtContent.setText("you are underweight 😢");
+                   }else{
+                       txtContent.setText("You are normal , maintain the same 😊😊 ");
+                   }
+
                }else{
-                   txtContent.setText("You are normal , maintain the same 😊😊 ");
+                  Toast.makeText(MainActivity.this,"Enter the values",Toast.LENGTH_SHORT);
                }
 
 
